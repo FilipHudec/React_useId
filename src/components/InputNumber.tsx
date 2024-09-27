@@ -1,4 +1,5 @@
 import React, {FC, useState, useId} from "react";
+import InputNumberCSS from "./InputNumber.module.css";
 
 type ControlProps = {
     label: string;
@@ -18,11 +19,14 @@ const InputNumber: FC<ControlProps> = ({label, defaultValue, onChange}) => {
 
     return (
          <>
-        <label htmlFor={id}>{label}</label>
-        <input type="range" value={value} id={id} onChange={handleCHange}/>
-        <span>{value}</span>
-        <button onClick={() => onChange(value)}>Submit</button>
+         <div className={InputNumberCSS.container}>
+             <label htmlFor={id}>{label}</label>
+          <input className={InputNumberCSS.InputRange} type="range" value={value} id={id} onChange={handleCHange}/>
+         <span className={InputNumberCSS.value}>{value}</span>
+         <button className={InputNumberCSS.input__btn} onClick={() => onChange(value)}>Submit</button>
+         </div>
         </>
     );
     }
     export default InputNumber;
+
