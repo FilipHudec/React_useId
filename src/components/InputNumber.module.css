@@ -1,0 +1,60 @@
+.InputRange {
+    accent-color: #e9eee7;
+}
+
+.input__btn {
+    background-color: #e9eee7;
+    color: #000;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transform: rotate(0deg);
+    animation: d .5s infinite;
+}
+
+.input__btn:hover {
+    transition:  10s ease-in-out;
+    transform: rotate(36000deg);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: #a7a2a2;
+    padding: 2em;
+    box-shadow: 0 0 1em #000;
+    animation: identifier .5s infinite;
+}
+
+@keyframes identifier {
+    0% {
+        transform: rotate(0deg);
+        transform: skew(-40deg);
+    }
+    50% {
+        transform: rotate(360deg);
+        transform: skew(40deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        transform: skew(-40deg);
+    }
+    
+}
+
+@keyframes d {
+    0% {
+        transform: skew(20deg);
+    }
+    50% {
+        transform: skew(-20deg);
+    }
+    100% {
+        transform: skew(20deg);
+    } 
+}
+
+
